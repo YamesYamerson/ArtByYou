@@ -1,0 +1,118 @@
+Framework.txt (5 marks)
+Describe purpose of site (1 mark)
+A description of each template and how you adapted the Bootstrap templates (4 marks)
+Any references
+This should only be 1-2 pages long (max).
+
+Purpose: The purpose of this site is to provide artists with a forum to post their work online, and for other artists and non-artists to be able to identify/contact one another for networking or transactional purposes. The templaing of this website are being designed as a practice exercise in creating a CMS from existing bootstrap templates, and adapting them to make a usable final product.
+
+Templates:
+
+All templates are adapted from the modern business bootstrap
+
+Information regarding changes and deletions are included in code comment in index.php, about.php, artists.php. collections.php, and signin.php
+
+index.php: Adapted from index.html
+This template is the home page of the site and allows users to either sign up of get more information on the site
+
+about.php: Adapted from about.html
+This template provides information about the purposes and intentions behind the site
+
+artists.php: Adapted from about.html
+This template provides a series thumbnail images, names, and mediums of different artistst that are featured on the site
+
+collections.php: Adapted from index.html
+This template provides a series of thumbnail images and descriptions of different artistic themes that are being featured on the site
+
+signin.php: adapted from contacts.html
+This template allows users to sign in using a username and a password
+
+References:
+https://startbootstrap.com/previews/modern-business
+
+
+Iteration 2:
+
+In this iteration, there is added functionality to the artist.php and collections_T.php, and created an aboutArtist.php, themes.php, and post.php page.
+
+artist.php - now has dynamic images which are added based on the contents of artist.csv file and images in the files/artists directory
+
+collections_T.php - now has dynamic images which are added based on contents of themes.csv file and images in the files/themes directory
+
+aboutArtist.php - when user selects artist from artist page, a query string navigates them to their personal page which uses allData.csv and the other folders and images in the files/ directory to populate the page with their art
+
+themes.php - when a user selects a specific collection from the collections_T.php page they are navigated to that theme's page using a querystring. Themes is then populated with all files in allData.csv that match that theme
+
+post.php - form entry page that allows users to post to allData.csv form by providing name, title, theme, and file information. The POST information is then stored to the last line in allData.csv when the users pushes the submit button
+
+https://www.webslesson.info/2017/09/how-to-store-form-data-in-csv-file-using-php.html
+
+Iteration 4:
+
+In this iteration, there is added functionality to all php files and created a navbar.php, signout.php, and signin.php page.
+
+aboutArtist.php - now has dynamic names which are added based on the contents of session variable
+
+post.php - form entry page that allows users to post to mySQL database
+
+signin.php - can sign in using sessions 
+
+createAccout.php - can create a new account and post data to artists and signin tables
+
+multiple .php cards were added to make components out of existing pages and code
+
+Resources:
+
+https://getbootstrap.com/docs/5.0/forms/floating-labels/
+
+https://stackoverflow.com/questions/21986678/display-php-form-errors-next-to-fields
+
+https://phppot.com/php/php-login-script-with-session/
+
+https://www.w3schools.com/php/php_sessions.asp
+
+https://stackoverflow.com/questions/18973182/i-would-like-to-know-how-to-stop-form-submission-when-the-validation-fails
+
+https://www.php.net/manual/en/mysqli.quickstart.prepared-statements.php
+
+https://stackoverflow.com/questions/45659624/prepared-statements-and-auto-increment-error
+
+https://www.w3schools.com/php/php_mysql_insert_multiple.asp
+
+https://makitweb.com/get-last-insert-id-mysql-table-php/
+
+Iteration 5:
+
+In this iteration, collections_T.php, themes.php, artists.php, about.php, signin.php, and createAccount.php were all updated
+
+All pages had PHP prepared statements added to INSERT statements where sql injection was possible, and some SELECT statement queries were also changed to prepared statements
+
+createAccount.php - this page was refactored to have the correct name and now uses regex checks for password input and error checks and messaging for other input
+
+signin.php - has better error messaging
+
+collections_T.php - image problem fixed
+
+themes.php - image problem fixed
+
+artists.php - image problem fixed
+
+aboutArtist.php - image problem fixed
+
+References:
+
+https://stackoverflow.com/questions/42467243/regex-strong-password-the-special-characters
+
+https://www.php.net/manual/en/function.password-hash.php
+
+https://www.php.net/manual/en/password.constants.php
+
+https://stackoverflow.com/questions/4088836/phps-preg-match-and-preg-match-all-functions
+
+https://www.php.net/manual/en/function.password-verify.php
+
+https://www.google.com/search?client=firefox-b-d&q=import+database+dump+phpmyadmin
+
+https://getbootstrap.com/docs/4.0/utilities/colors/
+
+https://stackoverflow.com/questions/2216052/how-to-check-whether-an-array-is-empty-using-php
